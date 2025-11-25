@@ -1,11 +1,5 @@
 #Este archivo de codigo se encarga de los metodos de ordenamiento 
 
-def compP(p):   #comparar por precio
-    return p.precio
-
-def compC(p):   #Comparar por clasificacion promedio (la variable se llama rating)
-    return -p.rating
-
 #Metodo Bubble sort 
 def bsort(lista, key):
     n = len(lista)
