@@ -22,9 +22,10 @@ class Producto:
     
 
 def GProductos(num = 50):
-        categoria = ["televisores","tablets","laptops","barras de sonido",
+        cItems = ["televisores","tablets","laptops","barras de sonido",
                      "power banks","teclados","mouse","webcams","unidades USB",
-                     "routers","escáneres","tóner","camaras"]
+                     "routers","escaneres","toner","camaras","audifonos",
+                     "cargadores","discos duros", "tecados"]
         base = [
             "Samsung","LG","Sony","Philips","Panasonic","TCL","Hisense",
             "Apple","Xiaomi","Huawei","OnePlus","Google","Nokia",
@@ -45,7 +46,7 @@ def GProductos(num = 50):
         for _ in range(num):
             nombre = random.choice(base) + "-" + random.choice(randoms)
             precio = random.uniform(1.0,1499.99)
-            categoria = random.choice(categoria)
+            categoria = random.choice(cItems)
             stock = random.randint(1,100)
             CProm = round(random.uniform(1.0,5.0))
 

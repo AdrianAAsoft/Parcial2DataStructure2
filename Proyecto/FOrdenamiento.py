@@ -33,3 +33,18 @@ def qsort(lista,key):
     mayor = [x for x in lista if key(x) > key(pivot)]
     return qsort(menor,key) + medio + qsort(mayor,key)
 
+#Metodo binary search 
+def BiSearch(lista, key):
+    #defino los limites 
+    izq = 0
+    der = len(lista) - 1
+    while izq <= der:
+        medio = izq +(der - izq) // 2
+        producto = lista[medio]
+        if producto.id == key:
+            return producto   #Si mi id fue encontrado retorno el producto 
+        elif producto.id  < key: 
+            izq = medio + 1
+        else:
+            der = medio -1 
+    return None   #no retornara nada si no lo encuentra
